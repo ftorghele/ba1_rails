@@ -1,0 +1,19 @@
+development:
+  adapter: mysql2
+  database: ba1_development
+  username: root
+  password:
+  host: localhost
+  encoding: UTF8
+  pool: 5
+  timeout: 5000
+
+test:
+  adapter: mysql2
+  database: ba1_test
+  username: root
+  password:
+  host: localhost
+  encoding: UTF8
+  pool: 5
+  timeout: 5000
