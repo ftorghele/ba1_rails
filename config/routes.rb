@@ -1,5 +1,7 @@
 Ba1Rails::Application.routes.draw do
 
-  root :to => 'home#index'
+  constraints(:accept => "application/json") do
+    resources :articles
+  end
 
 end

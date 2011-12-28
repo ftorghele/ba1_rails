@@ -14,7 +14,7 @@ class ResponseTimer
     log = Logger.new('response_time.txt')
 
     unless headers["Content-Type"].nil?
-      log.debug "#{Time.now-started}" if headers["Content-Type"].include? "text/html"
+      log.debug "#{Time.now-started}" if headers["Content-Type"].include? "application/json"
     end
 
     [status, headers, body]
