@@ -45,6 +45,8 @@ module Ba1Rails
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    config.middleware.use 'Rack::ResponseTimer'
+    #config.middleware.use 'Rack::ResponseTimer'
+    #config.middleware.use 'Rack::GCStats'
+    config.middleware.use ::Rack::PerftoolsProfiler, :default_printer => 'text', :mode => 'cputime', :frequency => 1000
   end
 end
