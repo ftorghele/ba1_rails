@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  respond_to :json
+  respond_to :xml, :json
 
   skip_before_filter :verify_authenticity_token
 
@@ -78,5 +78,4 @@ class ArticlesController < ApplicationController
         :reason => msg,
         :api => Article.api_links(:errorResponse) }, :status => code
   end
-
 end
